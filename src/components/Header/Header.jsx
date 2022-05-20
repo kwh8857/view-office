@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "./css/index.css";
-function Header({ isLogin, type, __insert, setIsLook }) {
+function Header({ isLogin, type, __insert, setIsLook, __logout }) {
   const location = useLocation();
 
   return (
@@ -16,7 +16,12 @@ function Header({ isLogin, type, __insert, setIsLook }) {
           <div className="title">관리자용</div>
         </div>
         {type === "all" ? (
-          <button className={`right ${isLogin ? "" : "none"}`}>로그아웃</button>
+          <button
+            className={`right ${isLogin ? "" : "none"}`}
+            onClick={__logout}
+          >
+            로그아웃
+          </button>
         ) : (
           <div className="button-wrapper">
             <button

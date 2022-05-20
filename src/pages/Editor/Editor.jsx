@@ -193,6 +193,7 @@ function Editor() {
       </Animation>
       <Look
         isLook={isLook}
+        setIsLook={setIsLook}
         title={info.title}
         sub={info.sub}
         category={info.category}

@@ -5,9 +5,17 @@ import DoubleImage from "./Templates/DoubleImage";
 import Image from "./Templates/Image";
 import Text from "./Templates/Text";
 import Youtube from "./Templates/Youtube";
-function Look({ isLook, title, sub, category, template }) {
+function Look({ isLook, title, sub, category, template, setIsLook }) {
   return (
-    <div className={`look ${isLook ? "on" : ""}`}>
+    <div className={`look-wrapper ${isLook ? "on" : ""}`}>
+      <img
+        src="/assets/cancel.svg"
+        alt=""
+        className="cancel"
+        onClick={() => {
+          setIsLook(false);
+        }}
+      />
       <div className="top">
         <Navigation top={90} />
         <div className="title">VIEW PORTFOLIO</div>

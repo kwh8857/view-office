@@ -1,10 +1,23 @@
-.look {
+.look-wrapper {
   position: fixed;
-  top: -100%;
+  overflow: hidden;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 0;
   z-index: 6000;
   background-color: white;
+  transition: height 0.3s ease-in-out;
+
+  &>.cancel {
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+  }
 
   &>.top {
     position: relative;
@@ -73,5 +86,11 @@
 }
 
 .on {
-  top: 0;
+
+  height: 100%;
+  overflow-y: scroll;
+
+  &>.cancel {
+    display: block;
+  }
 }

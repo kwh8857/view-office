@@ -1,13 +1,27 @@
-.look {
+.look-wrapper {
   position: fixed;
-  top: -100%;
+  overflow: hidden;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 0;
   z-index: 6000;
   background-color: white;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
-.look > .top {
+.look-wrapper > .cancel {
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+}
+
+.look-wrapper > .top {
   position: relative;
   height: 310px;
   border-bottom: solid 1px #000000;
@@ -24,17 +38,17 @@
           box-sizing: border-box;
 }
 
-.look > .top > .title {
+.look-wrapper > .top > .title {
   font-weight: 700;
   font-size: 60px;
   color: black;
 }
 
-.look > .bottom {
+.look-wrapper > .bottom {
   min-height: 1000px;
 }
 
-.look > .bottom > .wrapper {
+.look-wrapper > .bottom > .wrapper {
   -webkit-animation: arrow-moving 0.6s;
           animation: arrow-moving 0.6s;
   -webkit-animation-timing-function: cubic-bezier(0.8, -0.03, 0.31, 0.93);
@@ -44,7 +58,7 @@
   padding: 46px 0 300px 0;
 }
 
-.look > .bottom > .wrapper > .title-section {
+.look-wrapper > .bottom > .wrapper > .title-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,34 +67,34 @@
   margin-bottom: 49px;
 }
 
-.look > .bottom > .wrapper > .title-section > .title {
+.look-wrapper > .bottom > .wrapper > .title-section > .title {
   width: 319px;
   font-weight: 700;
   font-size: 35px;
   line-height: 45px;
 }
 
-.look > .bottom > .wrapper > .title-section > .subject {
+.look-wrapper > .bottom > .wrapper > .title-section > .subject {
   width: 412px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 5px;
 }
 
-.look > .bottom > .wrapper > .title-section > .subject > .category {
+.look-wrapper > .bottom > .wrapper > .title-section > .subject > .category {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 6px;
 }
 
-.look > .bottom > .wrapper > .title-section > .subject > .sub {
+.look-wrapper > .bottom > .wrapper > .title-section > .subject > .sub {
   white-space: pre-line;
   font-weight: 300;
   font-size: 17px;
   line-height: 30px;
 }
 
-.look > .bottom > .wrapper > .template-wrapper {
+.look-wrapper > .bottom > .wrapper > .template-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,6 +106,11 @@
 }
 
 .on {
-  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.on > .cancel {
+  display: block;
 }
 /*# sourceMappingURL=index.css.map */
