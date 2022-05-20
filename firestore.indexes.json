@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "editor",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "isopen",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -1,0 +1,25 @@
+.toast {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  position: fixed;
+  bottom: -100px;
+  transition: bottom 0.3s ease-in;
+
+  &>.msg {
+    width: 411px;
+    height: 42px;
+    background-color: #CD3325;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.toast-active {
+  bottom: 41px;
+}

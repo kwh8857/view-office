@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: pretendard, sans-serif;
+  color: black;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html [contenteditable=true]:empty:before,
+body [contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  /* For Firefox */
+  color: #bfbfbf;
+  font-size: 17px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+button,
+input,
+textarea,
+p {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+  background-color: unset;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+p:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  width: 992px;
+  height: 100%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=core.css.map */

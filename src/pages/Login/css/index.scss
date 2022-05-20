@@ -1,0 +1,70 @@
+.login {
+  width: 100%;
+  height: 100%;
+  background-color: #F5F6F8;
+
+  &>.wrapper {
+
+    &>.content-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      &>form {
+        width: 371px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &>img {
+          width: 180.73px;
+        }
+
+        &>.title {
+          font-weight: 700;
+          font-size: 23px;
+          margin: 20px 0 54px 0;
+        }
+
+        &>.list {
+          width: 371px;
+          display: grid;
+          row-gap: 30px;
+
+          &>.card {
+            &>.text {
+              font-weight: 700;
+              font-size: 13px;
+              margin-bottom: 10px;
+            }
+
+            &>input {
+              background-color: white;
+              width: 100%;
+              height: 50px;
+              box-sizing: border-box;
+              border: 1px solid #DBDBDB;
+              border-radius: 5px;
+              padding: 10px;
+            }
+          }
+        }
+
+        &>button {
+          width: 100%;
+          height: 50px;
+          background-color: #000000;
+          border-radius: 5px;
+          margin-top: 41px;
+          font-weight: 700;
+          font-size: 16px;
+          color: #FFFFFF;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

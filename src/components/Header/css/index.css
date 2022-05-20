@@ -1,0 +1,79 @@
+header {
+  width: 100%;
+  height: 73px;
+  border: 1px solid #E8E9ED;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+  background-color: white;
+}
+
+header > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header > .wrapper > .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+header > .wrapper > .left > img {
+  width: 83px;
+}
+
+header > .wrapper > .left > .title {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header > .wrapper > .right {
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+header > .wrapper > .button-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (110px)[2];
+      grid-template-columns: repeat(2, 110px);
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+header > .wrapper > .button-wrapper > button {
+  border-radius: 5px;
+  height: 42px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+header > .wrapper > .button-wrapper > .look {
+  background-color: #E8E9ED;
+}
+
+header > .wrapper > .button-wrapper > .insert {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.none {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

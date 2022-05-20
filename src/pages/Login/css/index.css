@@ -1,0 +1,81 @@
+.login {
+  width: 100%;
+  height: 100%;
+  background-color: #F5F6F8;
+}
+
+.login > .wrapper > .content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login > .wrapper > .content-wrapper > form {
+  width: 371px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login > .wrapper > .content-wrapper > form > img {
+  width: 180.73px;
+}
+
+.login > .wrapper > .content-wrapper > form > .title {
+  font-weight: 700;
+  font-size: 23px;
+  margin: 20px 0 54px 0;
+}
+
+.login > .wrapper > .content-wrapper > form > .list {
+  width: 371px;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 30px;
+}
+
+.login > .wrapper > .content-wrapper > form > .list > .card > .text {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.login > .wrapper > .content-wrapper > form > .list > .card > input {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.login > .wrapper > .content-wrapper > form > button {
+  width: 100%;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 5px;
+  margin-top: 41px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */
