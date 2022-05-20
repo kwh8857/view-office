@@ -149,12 +149,12 @@ function TitleSection({ category, dispatch, info: { title, sub } }) {
           <div className="ti">프로젝트 개요</div>
           <textarea
             type="text"
-            maxLength={120}
+            maxLength={180}
             value={sub ? sub : ""}
-            placeholder="개요는 최대 2줄까지 입력해주세요"
+            placeholder="개요는 최대 3줄까지 입력해주세요"
             onChange={(e) => {
               const line = e.target.value.split(/\n/g);
-              line.splice(2);
+              line.splice(3);
               let test = line.join();
               let result = test.replace(/,/g, "\n");
               if (result) {
