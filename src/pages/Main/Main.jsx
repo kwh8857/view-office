@@ -29,6 +29,37 @@ function Main() {
     },
     [navigate]
   );
+  const __changePin = useCallback(
+    (id, state, isopen) => {
+      if (isopen) {
+        Fstore.collection("editor")
+          .doc(id)
+          .update({
+            ispin: state,
+          })
+          .then(() => {
+            dispatch({
+              type: "@config/toast",
+              payload: {
+                isactive: true,
+                msg: state
+                  ? "프로젝트가 상단 고정되었습니다"
+                  : "상단 고정 해제되었습니다",
+              },
+            });
+          });
+      } else {
+        dispatch({
+          type: "@config/toast",
+          payload: {
+            isactive: true,
+            msg: "공개된 프로젝트만 고정이 가능합니다",
+          },
+        });
+      }
+    },
+    [dispatch]
+  );
 
   const __changOpen = useCallback((id, open) => {
     Fstore.collection("editor").doc(id).update({
@@ -234,9 +265,10 @@ function Main() {
                         data: {
                           title,
                           category,
-                          mainimg: { url },
+                          mainimg: { resize },
                           isopen,
                           timestamp,
+                          ispin,
                         },
                         key,
                       },
@@ -248,12 +280,14 @@ function Main() {
                           title={title}
                           category={category}
                           isopen={isopen}
-                          img={url}
+                          img={resize}
+                          ispin={ispin}
                           id={key}
                           timestamp={timestamp}
                           __delete={__delete}
                           __changOpen={__changOpen}
                           __fixnav={__fixnav}
+                          __changePin={__changePin}
                         />
                       );
                     }
@@ -307,5 +341,6 @@ const tags = [
   { title: "프로젝트명", type: "name" },
   { title: "수정", type: "fix" },
   { title: "공개여부", type: "open" },
+  { title: "고정", type: "lock" },
   { title: "삭제", type: "remove" },
 ];

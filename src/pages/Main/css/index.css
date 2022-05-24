@@ -224,22 +224,26 @@
 }
 
 .main > .wrapper > .bottom > .tag-wrapper > .name {
-  width: 387px;
+  width: 318px;
   text-align: left;
 }
 
 .main > .wrapper > .bottom > .tag-wrapper > .fix {
   width: 104px;
-  margin: 0 24px 0 15px;
+  margin: 0 24px 0 16px;
 }
 
 .main > .wrapper > .bottom > .tag-wrapper > .open {
   width: 78px;
 }
 
+.main > .wrapper > .bottom > .tag-wrapper > .lock {
+  width: 42px;
+  margin: 0 26px 0 25px;
+}
+
 .main > .wrapper > .bottom > .tag-wrapper > .remove {
   width: 25px;
-  margin-left: 31px;
 }
 
 .main > .wrapper > .bottom > .list {
@@ -268,9 +272,6 @@
 .main > .wrapper > .bottom > .list > .card > .img-wrapper {
   width: 189px;
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .main > .wrapper > .bottom > .list > .card > .category {
@@ -282,7 +283,7 @@
 }
 
 .main > .wrapper > .bottom > .list > .card > .name {
-  width: 387px;
+  width: 318px;
   text-align: left;
   font-weight: 700;
   font-size: 17px;
@@ -338,6 +339,40 @@
   right: 40px;
 }
 
+.main > .wrapper > .bottom > .list > .card > .pin {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  margin: 0 30px 0 23px;
+}
+
+.main > .wrapper > .bottom > .list > .card > .pinactive {
+  border: unset;
+  background-color: #FFE4E1;
+}
+
+.main > .wrapper > .bottom > .list > .card > .pinactive > svg > path {
+  fill: #CD3325;
+}
+
+.main > .wrapper > .bottom > .list > .card > .blur {
+  border: unset;
+  background-color: #E8E9ED;
+}
+
 .main > .wrapper > .bottom > .list > .card > .active {
   background-color: #8CE39F;
 }
@@ -350,7 +385,6 @@
   cursor: pointer;
   width: 21px;
   height: 21px;
-  margin-left: 31px;
 }
 
 .main > .wrapper > .bottom > .list > .card > .remove > img {
