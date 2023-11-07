@@ -20,9 +20,26 @@
   font-weight: 700;
   font-size: 30px;
 }
+.main > .wrapper > .top .order-btn {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  width: 151px;
+  height: 42px;
+  background: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  border: solid 1px black;
+}
+.main > .wrapper > .top .order-btn:hover {
+  background-color: #777777;
+  color: white;
+}
 .main > .wrapper > .top > .right {
   display: grid;
-  grid-template-columns: 227px 151px;
+  grid-template-columns: 227px 151px 151px;
   -webkit-column-gap: 14px;
      -moz-column-gap: 14px;
           column-gap: 14px;
@@ -38,7 +55,7 @@
   border-radius: 5px;
   overflow: hidden;
   position: absolute;
-  right: 406px;
+  right: 566px;
   display: grid;
   grid-template-rows: 42px 37px 37px 37px 37px 37px;
   font-size: 14px;
@@ -234,6 +251,22 @@
           align-items: center;
   text-align: center;
   position: relative;
+}
+.main > .wrapper > .bottom > .list > .card .arrow-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 26px);
+  -webkit-column-gap: 4px;
+     -moz-column-gap: 4px;
+          column-gap: 4px;
+  position: absolute;
+  right: 20px;
+}
+.main > .wrapper > .bottom > .list > .card .arrow-wrapper > img {
+  cursor: pointer;
+}
+.main > .wrapper > .bottom > .list > .card .arrow-wrapper > img:nth-child(3), .main > .wrapper > .bottom > .list > .card .arrow-wrapper > img:nth-child(4) {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 .main > .wrapper > .bottom > .list > .card > .img-wrapper {
   width: 189px;

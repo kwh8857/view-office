@@ -16,6 +16,7 @@ function Main() {
   const [search, setSearch] = useState(undefined);
   const [List, setList] = useState([]);
   const [displayList, setdisplayList] = useState([]);
+  const [isOrder, setisOrder] = useState(false);
   const __fixnav = useCallback(
     (id, cat, timestamp) => {
       navigate("/editor", {
@@ -80,6 +81,30 @@ function Main() {
     }
   }, [nowindex]);
 
+  const ChangeOrder = useCallback(
+    (id, type) => {
+      let clone = List.slice();
+      const index = clone.findIndex((item) => item.key === id);
+      let timestamp;
+      if (type === "all-up" && index > 0) {
+        timestamp = clone[0].data.timestamp + 1;
+      }
+      if (type === "up") {
+        timestamp = clone[index - 1].data.timestamp + 1;
+      }
+      if (type === "down") {
+        timestamp = clone[index + 1].data.timestamp - 1;
+      }
+      if (type === "all-down" && index < clone.length - 1) {
+        timestamp = clone[clone.length - 1].data.timestamp - 1;
+      }
+      Fstore.collection("editor").doc(id).update({
+        timestamp,
+      });
+    },
+    [List]
+  );
+
   const __delete = useCallback(
     (id) => {
       Fstorage.ref(`editor/${id}`)
@@ -135,6 +160,10 @@ function Main() {
 
   useEffect(() => {
     const arr = List.slice();
+    if (isOrder) {
+      setdisplayList(arr);
+      return;
+    }
     if (category !== 0) {
       const cat = arr.filter(({ data }) =>
         category === 1
@@ -162,7 +191,7 @@ function Main() {
       }
     }
     return () => {};
-  }, [List, category, search, nowindex]);
+  }, [List, category, search, nowindex, isOrder]);
 
   useEffect(() => {
     Fstore.collection("editor")
@@ -187,61 +216,80 @@ function Main() {
       <div className="wrapper">
         <div className="top">
           <div className="title">포트폴리오 관리</div>
-          <div className="right">
-            <div
-              className={`category ${isOpen ? "open" : ""}`}
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
-              <div className="now">
-                {arr[category]}
-                <img src="/assets/category.svg" alt="" />
-              </div>
-              {arr.map((item, idx) => {
-                return (
-                  <div
-                    className="select"
-                    key={idx}
-                    onClick={() => {
-                      setCategory(idx);
-                    }}
-                  >
-                    {item}
-                  </div>
-                );
-              })}
-            </div>
-            <div className="search">
-              <input
-                type="text"
-                placeholder="검색어를 입력해주세요"
-                onChange={(e) => {
-                  if (e.target.value) {
-                    setSearch(e.target.value);
-                  } else {
-                    setSearch(undefined);
-                  }
-                }}
-              />
-              <img src="/assets/search.svg" alt="" />
-            </div>
+          {isOrder ? (
             <button
-              className="insert"
+              className="order-btn"
               onClick={() => {
-                navigate("/editor", {
-                  state: {
-                    type: "new",
-                    timestamp: Date.now(),
-                    category: "space",
-                  },
-                });
+                setisOrder(false);
               }}
             >
-              <img src="/assets/plus.svg" alt="" />
-              <div>포트폴리오관리</div>
+              <div>닫기</div>
             </button>
-          </div>
+          ) : (
+            <div className="right">
+              <div
+                className={`category ${isOpen ? "open" : ""}`}
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                <div className="now">
+                  {arr[category]}
+                  <img src="/assets/category.svg" alt="" />
+                </div>
+                {arr.map((item, idx) => {
+                  return (
+                    <div
+                      className="select"
+                      key={idx}
+                      onClick={() => {
+                        setCategory(idx);
+                      }}
+                    >
+                      {item}
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="search">
+                <input
+                  type="text"
+                  placeholder="검색어를 입력해주세요"
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      setSearch(e.target.value);
+                    } else {
+                      setSearch(undefined);
+                    }
+                  }}
+                />
+                <img src="/assets/search.svg" alt="" />
+              </div>
+              <button
+                className="order-btn"
+                onClick={() => {
+                  setisOrder(true);
+                }}
+              >
+                <div>순서 변경하기</div>
+              </button>
+              <button
+                className="insert"
+                onClick={() => {
+                  navigate("/editor", {
+                    state: {
+                      type: "new",
+                      timestamp: Date.now(),
+                      category: "space",
+                    },
+                  });
+                }}
+              >
+                <img src="/assets/plus.svg" alt="" />
+                <div>포트폴리오관리</div>
+              </button>
+            </div>
+          )}
         </div>
         <div className="bottom">
           {List.length > 0 ? (
@@ -287,7 +335,9 @@ function Main() {
                           __delete={__delete}
                           __changOpen={__changOpen}
                           __fixnav={__fixnav}
+                          isOrder={isOrder}
                           __changePin={__changePin}
+                          ChangeOrder={ChangeOrder}
                         />
                       );
                     }

@@ -59,6 +59,16 @@ const Wrapper = styled.div`
         }
       }
     }
+    .title-wrapper {
+      display: flex;
+      column-gap: 24px;
+      & > div:nth-child(1) {
+        width: 582px;
+      }
+      & > div:nth-child(2) {
+        width: 388px;
+      }
+    }
   }
   input {
     width: 100%;
@@ -82,7 +92,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function TitleSection({ category, dispatch, info: { title, sub } }) {
+function TitleSection({ category, dispatch, info: { title, sub, price } }) {
   const __changeCategory = useCallback(
     (type) => {
       dispatch({
@@ -101,26 +111,50 @@ function TitleSection({ category, dispatch, info: { title, sub } }) {
 
       <div className="grid-wrapper">
         <div className="title-wrapper">
-          <div className="ti">게시글 제목</div>
-          <input
-            value={title ? title : ""}
-            type="text"
-            maxLength={60}
-            placeholder="게시글 제목을 입력해주세요"
-            onChange={(e) => {
-              if (e.target.value) {
-                dispatch({
-                  type: "TITLE",
-                  title: e.target.value,
-                });
-              } else {
-                dispatch({
-                  type: "TITLE",
-                  title: undefined,
-                });
-              }
-            }}
-          />
+          <div className="title-st">
+            <div className="ti">게시글 제목</div>
+            <input
+              value={title ? title : ""}
+              type="text"
+              maxLength={60}
+              placeholder="게시글 제목을 입력해주세요"
+              onChange={(e) => {
+                if (e.target.value) {
+                  dispatch({
+                    type: "TITLE",
+                    title: e.target.value,
+                  });
+                } else {
+                  dispatch({
+                    type: "TITLE",
+                    title: undefined,
+                  });
+                }
+              }}
+            />
+          </div>
+          <div className="title-st">
+            <div className="ti">견적 (선택)</div>
+            <input
+              value={price ? price : ""}
+              type="text"
+              maxLength={60}
+              placeholder="견적을 입력해주세요"
+              onChange={(e) => {
+                if (e.target.value) {
+                  dispatch({
+                    type: "PRICE",
+                    price: e.target.value,
+                  });
+                } else {
+                  dispatch({
+                    type: "PRICE",
+                    price: undefined,
+                  });
+                }
+              }}
+            />
+          </div>
         </div>
         <div className="category-wrapper">
           <div className="ti">카테고리 선택</div>

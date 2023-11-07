@@ -35,6 +35,8 @@ function Editor() {
         return action.info;
       case "TITLE":
         return { ...state, title: action.title };
+            case "PRICE":
+        return { ...state, price: action.price };
       case "SUB":
         return { ...state, sub: action.sub };
       case "CATEGORY":
@@ -49,6 +51,7 @@ function Editor() {
     title: undefined,
     sub: undefined,
     category: "space",
+    price:undefined
   });
 
   const [isUp, setIsUp] = useState({
