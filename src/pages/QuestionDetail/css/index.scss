@@ -1,0 +1,116 @@
+#root {
+  .question-detail-page {
+    width: 1024px;
+    padding: 118px 0;
+    margin: 0 auto;
+
+    &>.title-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &>.title {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 700;
+
+        &>img {
+          cursor: pointer;
+          width: 20px
+        }
+      }
+
+      &>.answer-btn {
+        cursor: pointer;
+        width: 111px;
+        height: 42px;
+        border: 1px solid #DBDBDB;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        column-gap: 6px;
+
+
+        &>.circle {
+          width: 20px;
+          height: 20px;
+          border: solid 1px #DBDBDB;
+          border-radius: 50%;
+        }
+
+        &>.btn-title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #777777;
+        }
+      }
+    }
+
+    &>.content-box {
+      margin: 13px 0 30px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: #F5F6F8;
+      box-sizing: border-box;
+      padding: 24px;
+
+      .content-box-title {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 8px;
+        border-bottom: solid 1px black;
+      }
+
+      .content-list {
+        margin-top: 18px;
+        display: grid;
+        row-gap: 13px;
+
+        .content-line {
+          display: flex;
+          align-items: center;
+          column-gap: 24px;
+          font-size: 13px;
+
+          .content-tag {
+            font-weight: 700;
+            width: 75px;
+          }
+        }
+      }
+
+    }
+
+    .memo-section {
+      &>.title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      &>textarea {
+        margin-top: 8px;
+        width: 100%;
+        height: 188px;
+        border: solid 1px #DBDBDB;
+        padding: 12px 16px;
+        resize: none;
+      }
+
+      &>button {
+        cursor: pointer;
+        margin-top: 14px;
+        width: 133px;
+        height: 50px;
+        color: white;
+        background-color: black;
+        font-size: 16px;
+        font-weight: 700;
+        float: right;
+      }
+    }
+  }
+}

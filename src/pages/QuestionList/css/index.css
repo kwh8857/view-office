@@ -170,3 +170,214 @@
 #root .question-list-page > .wrapper > .top > .right > .search > img {
   width: 20px;
 }
+#root .question-list-page > .wrapper > .bottom {
+  margin-top: 34px;
+}
+#root .question-list-page > .wrapper > .bottom > .tag-wrapper {
+  padding: 0 25px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #777777;
+  grid-template-columns: 55px 110px 110px 490px 111px 25px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+#root .question-list-page > .wrapper > .bottom > .tag-wrapper > .name, #root .question-list-page > .wrapper > .bottom > .tag-wrapper > .answer {
+  text-align: center;
+}
+#root .question-list-page > .wrapper > .bottom > .list {
+  margin-top: 11px;
+  display: grid;
+  row-gap: 16px;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card {
+  padding: 0 25px;
+  width: 100%;
+  height: 83px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 55px 110px 110px 490px 111px 25px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: #777777;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card .touch-area {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 700px;
+  height: 83px;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  color: black;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .answer-btn {
+  cursor: pointer;
+  width: 111px;
+  height: 42px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8px;
+  -webkit-column-gap: 6px;
+     -moz-column-gap: 6px;
+          column-gap: 6px;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .answer-btn > .circle {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #DBDBDB;
+  border-radius: 50%;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .answer-btn > .btn-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777777;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .remove {
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .remove > img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .delete-box {
+  -webkit-transition: right 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+  width: 333px;
+  height: 83px;
+  position: absolute;
+  right: -333px;
+  background-color: #CD3325;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 27px 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .delete-box > .title {
+  width: 130px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .delete-box > button {
+  cursor: pointer;
+  margin: 0 23px 0 10px;
+  width: 104px;
+  height: 42px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  color: black;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .delete-box > svg {
+  cursor: pointer;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .delete-box > svg > path {
+  stroke: #FFFFFF;
+}
+#root .question-list-page > .wrapper > .bottom > .list > .question-card > .active {
+  right: 0;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper {
+  margin-top: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper > img {
+  cursor: pointer;
+  width: 24px;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper > .index-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 7px;
+     -moz-column-gap: 7px;
+          column-gap: 7px;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper > .index-wrapper > button {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #777777;
+  background-color: #F5F6F8;
+  border-radius: 5px;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper > .index-wrapper > .active {
+  background-color: #000000;
+  color: white;
+}
+#root .question-list-page > .wrapper > .bottom > .index-wrapper > .right-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+#root .question-list-page > .wrapper > .bottom > .disabled {
+  width: 100%;
+  height: 149px;
+  background: #F5F6F8;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 9px;
+}
+#root .question-list-page > .wrapper > .bottom > .disabled > img {
+  width: 42px;
+}
+#root .question-list-page > .wrapper > .bottom > .disabled > .title {
+  font-weight: 700;
+  font-size: 17px;
+  color: #A7A7A7;
+}

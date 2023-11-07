@@ -8,6 +8,7 @@ import Editor from "./pages/Editor/Editor";
 import Toast from "./components/Toast/Toast";
 import firebaseApp from "./config/firebaseApp";
 import QuestionList from "./pages/QuestionList/QuestionList";
+import QuestionDetail from "./pages/QuestionDetail/QuestionDetail";
 
 const Fauth = firebaseApp.auth();
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <>
             <Route path="/*" exact element={<Main />} />
             <Route path="/question" exact element={<QuestionList />} />
+            <Route path="/question/detail" exact element={<QuestionDetail />} />
             <Route path="/editor/*" exact element={<Editor />} />
           </>
         ) : (

@@ -1,0 +1,121 @@
+#root .question-detail-page {
+  width: 1024px;
+  padding: 118px 0;
+  margin: 0 auto;
+}
+#root .question-detail-page > .title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#root .question-detail-page > .title-section > .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+#root .question-detail-page > .title-section > .title > img {
+  cursor: pointer;
+  width: 20px;
+}
+#root .question-detail-page > .title-section > .answer-btn {
+  cursor: pointer;
+  width: 111px;
+  height: 42px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8px;
+  -webkit-column-gap: 6px;
+     -moz-column-gap: 6px;
+          column-gap: 6px;
+}
+#root .question-detail-page > .title-section > .answer-btn > .circle {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #DBDBDB;
+  border-radius: 50%;
+}
+#root .question-detail-page > .title-section > .answer-btn > .btn-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777777;
+}
+#root .question-detail-page > .content-box {
+  margin: 13px 0 30px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #F5F6F8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 24px;
+}
+#root .question-detail-page > .content-box .content-box-title {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: solid 1px black;
+}
+#root .question-detail-page > .content-box .content-list {
+  margin-top: 18px;
+  display: grid;
+  row-gap: 13px;
+}
+#root .question-detail-page > .content-box .content-list .content-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  font-size: 13px;
+}
+#root .question-detail-page > .content-box .content-list .content-line .content-tag {
+  font-weight: 700;
+  width: 75px;
+}
+#root .question-detail-page .memo-section > .title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+#root .question-detail-page .memo-section > textarea {
+  margin-top: 8px;
+  width: 100%;
+  height: 188px;
+  border: solid 1px #DBDBDB;
+  padding: 12px 16px;
+  resize: none;
+}
+#root .question-detail-page .memo-section > button {
+  cursor: pointer;
+  margin-top: 14px;
+  width: 133px;
+  height: 50px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  font-weight: 700;
+  float: right;
+}
