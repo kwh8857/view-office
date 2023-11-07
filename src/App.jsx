@@ -32,7 +32,7 @@ function App() {
     <Router>
       <Header isLogin={isLogin} type="all" __logout={__logout} />
       <Routes>
-        {true ? (
+        {isLogin ? (
           <>
             <Route path="/*" exact element={<Main />} />
             <Route path="/question" exact element={<QuestionList />} />
