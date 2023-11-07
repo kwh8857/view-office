@@ -35,7 +35,7 @@ function Editor() {
         return action.info;
       case "TITLE":
         return { ...state, title: action.title };
-            case "PRICE":
+      case "PRICE":
         return { ...state, price: action.price };
       case "SUB":
         return { ...state, sub: action.sub };
@@ -51,7 +51,7 @@ function Editor() {
     title: undefined,
     sub: undefined,
     category: "space",
-    price:undefined
+    price: undefined,
   });
 
   const [isUp, setIsUp] = useState({
@@ -61,7 +61,7 @@ function Editor() {
   const [isLook, setIsLook] = useState(false);
   const __updateData = useCallback(
     (type) => {
-      const { title, sub, category } = info;
+      const { title, sub, category, price } = info;
       const mainfilt = template.filter(
         ({ type }) => type === "IMAGE" || type === "SMALL"
       );
@@ -69,6 +69,7 @@ function Editor() {
         .doc(temKey)
         .update({
           template: template,
+          price: price ? price : "",
           title: title ? title : "임시저장",
           sub: sub ? sub : "",
           category,
@@ -150,6 +151,7 @@ function Editor() {
               title: value.title,
               sub: value.sub,
               category: value.category,
+              price: value.price ? value.price : "",
             },
           });
           dispatch({
