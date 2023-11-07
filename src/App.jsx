@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Editor from "./pages/Editor/Editor";
 import Toast from "./components/Toast/Toast";
 import firebaseApp from "./config/firebaseApp";
+import QuestionList from "./pages/QuestionList/QuestionList";
 
 const Fauth = firebaseApp.auth();
 function App() {
@@ -30,9 +31,10 @@ function App() {
     <Router>
       <Header isLogin={isLogin} type="all" __logout={__logout} />
       <Routes>
-        {isLogin ? (
+        {true ? (
           <>
             <Route path="/*" exact element={<Main />} />
+            <Route path="/question" exact element={<QuestionList />} />
             <Route path="/editor/*" exact element={<Editor />} />
           </>
         ) : (

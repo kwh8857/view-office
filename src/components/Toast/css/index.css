@@ -14,7 +14,6 @@
   -webkit-transition: bottom 0.3s ease-in;
   transition: bottom 0.3s ease-in;
 }
-
 .toast > .msg {
   width: 411px;
   height: 42px;
@@ -34,4 +33,3 @@
 .toast-active {
   bottom: 41px;
 }
-/*# sourceMappingURL=index.css.map */

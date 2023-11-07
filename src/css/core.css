@@ -9,7 +9,6 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-
 html [contenteditable=true]:empty:before,
 body [contenteditable=true]:empty:before {
   content: attr(placeholder);
@@ -17,7 +16,7 @@ body [contenteditable=true]:empty:before {
   /* For Firefox */
   color: #bfbfbf;
   font-size: 17px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 #root {
@@ -37,7 +36,6 @@ p {
   -webkit-appearance: none;
   background-color: unset;
 }
-
 button:focus,
 input:focus,
 textarea:focus,
@@ -65,8 +63,7 @@ textarea:focus {
 }
 
 a {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   color: black;
 }
 
@@ -79,4 +76,3 @@ img {
   height: 100%;
   margin: 0 auto;
 }
-/*# sourceMappingURL=core.css.map */

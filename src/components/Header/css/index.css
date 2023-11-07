@@ -8,7 +8,6 @@ header {
   z-index: 5000;
   background-color: white;
 }
-
 header > .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +19,6 @@ header > .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-
 header > .wrapper > .left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,33 +27,41 @@ header > .wrapper > .left {
       -ms-flex-align: end;
           align-items: flex-end;
   -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
           column-gap: 5px;
 }
-
 header > .wrapper > .left > img {
   width: 83px;
 }
-
 header > .wrapper > .left > .title {
   font-weight: 500;
   font-size: 15px;
 }
-
+header > .wrapper > .left .link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
+  margin-left: 49px;
+}
+header > .wrapper > .left .link-wrapper > a {
+  font-size: 18px;
+  font-weight: 700;
+}
 header > .wrapper > .right {
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
 }
-
 header > .wrapper > .button-wrapper {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (110px)[2];
-      grid-template-columns: repeat(2, 110px);
+  grid-template-columns: repeat(2, 110px);
   -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
           column-gap: 16px;
 }
-
 header > .wrapper > .button-wrapper > button {
   border-radius: 5px;
   height: 42px;
@@ -63,11 +69,9 @@ header > .wrapper > .button-wrapper > button {
   font-weight: 700;
   font-size: 15px;
 }
-
 header > .wrapper > .button-wrapper > .look {
   background-color: #E8E9ED;
 }
-
 header > .wrapper > .button-wrapper > .insert {
   background-color: #000000;
   color: #FFFFFF;
@@ -76,4 +80,3 @@ header > .wrapper > .button-wrapper > .insert {
 .none {
   display: none;
 }
-/*# sourceMappingURL=index.css.map */

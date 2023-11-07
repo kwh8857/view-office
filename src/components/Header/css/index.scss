@@ -26,6 +26,17 @@ header {
         font-weight: 500;
         font-size: 15px;
       }
+
+      .link-wrapper {
+        display: flex;
+        column-gap: 32px;
+        margin-left: 49px;
+
+        &>a {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
     }
 
     &>.right {

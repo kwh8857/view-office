@@ -1,0 +1,172 @@
+#root .question-list-page {
+  padding-top: 130px;
+}
+#root .question-list-page > .wrapper {
+  padding-bottom: 100px;
+}
+#root .question-list-page > .wrapper > .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#root .question-list-page > .wrapper > .top > .title {
+  font-weight: 700;
+  font-size: 30px;
+}
+#root .question-list-page > .wrapper > .top > .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 180px;
+     -moz-column-gap: 180px;
+          column-gap: 180px;
+  position: relative;
+}
+#root .question-list-page > .wrapper > .top > .right > .filter-btn {
+  cursor: pointer;
+  width: 131px;
+  height: 42px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 11px;
+  -webkit-column-gap: 6px;
+     -moz-column-gap: 6px;
+          column-gap: 6px;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+}
+#root .question-list-page > .wrapper > .top > .right > .filter-btn > .circle {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #DBDBDB;
+  border-radius: 50%;
+}
+#root .question-list-page > .wrapper > .top > .right > .filter-btn > .btn-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+#root .question-list-page > .wrapper > .top > .right > .category {
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  cursor: pointer;
+  width: 162px;
+  height: 42px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  right: 236px;
+  display: grid;
+  grid-template-rows: 42px 37px 37px 37px 37px 37px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 100;
+}
+#root .question-list-page > .wrapper > .top > .right > .category > div {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 11px 11px 11px 14px;
+  border-top: 1px solid #DBDBDB;
+  color: #777777;
+  background-color: white;
+}
+#root .question-list-page > .wrapper > .top > .right > .category > div:hover {
+  background-color: #F5F6F8;
+}
+#root .question-list-page > .wrapper > .top > .right > .category > .now {
+  color: #000000;
+  border: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#root .question-list-page > .wrapper > .top > .right > .category > .now > img {
+  width: 20px;
+}
+#root .question-list-page > .wrapper > .top > .right > .category > .now:hover {
+  background-color: white;
+}
+#root .question-list-page > .wrapper > .top > .right > .open {
+  height: 230px;
+}
+#root .question-list-page > .wrapper > .top > .right > .open > .now > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+#root .question-list-page > .wrapper > .top > .right > .search {
+  width: 227px;
+  height: 42px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 11px 16px 11px 14px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+#root .question-list-page > .wrapper > .top > .right > .search > img {
+  width: 20px;
+}

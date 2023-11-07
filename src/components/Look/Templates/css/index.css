@@ -8,22 +8,19 @@
 }
 
 .double {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
           column-gap: 28px;
 }
 
 .THREE {
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .TWO {
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .player {
@@ -37,10 +34,10 @@
   }
   .double {
     -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
             column-gap: 15px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .player {
     height: 300px;
@@ -49,11 +46,10 @@
     width: 100%;
   }
   .double {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
     row-gap: 17px;
     -webkit-column-gap: unset;
+       -moz-column-gap: unset;
             column-gap: unset;
   }
 }
-/*# sourceMappingURL=index.css.map */
