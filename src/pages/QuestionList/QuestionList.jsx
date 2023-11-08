@@ -27,7 +27,7 @@ const QuestionList = () => {
             type: "@config/toast",
             payload: {
               isactive: true,
-              msg: "프로젝트가 삭제되었습니다",
+              msg: "문의가 삭제되었습니다",
             },
           });
         });
