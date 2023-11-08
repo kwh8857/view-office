@@ -123,9 +123,7 @@
           column-gap: 10px;
 }
 .main > .wrapper > .top > .right > .search > input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 160px;
   font-size: 14px;
   font-weight: 500;
 }

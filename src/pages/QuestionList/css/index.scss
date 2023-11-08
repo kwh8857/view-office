@@ -57,7 +57,7 @@
             position: absolute;
             right: 236px;
             display: grid;
-            grid-template-rows: 42px 37px 37px 37px 37px 37px;
+            grid-template-rows: 42px 37px 37px 37px 37px 37px 37px 37px;
             font-size: 14px;
             font-weight: 500;
             z-index: 100;
@@ -95,7 +95,7 @@
           }
 
           &>.open {
-            height: 230px;
+            height: 420px;
 
             &>.now {
               &>img {
@@ -117,7 +117,7 @@
             column-gap: 10px;
 
             &>input {
-              flex: 1;
+              width: 160px;
               font-size: 14px;
               font-weight: 500;
             }

@@ -202,6 +202,7 @@ function Editor() {
         title={info.title}
         sub={info.sub}
         category={info.category}
+        price={info.price}
         template={template}
       />
       <Loading />

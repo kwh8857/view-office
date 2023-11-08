@@ -5,7 +5,7 @@ import DoubleImage from "./Templates/DoubleImage";
 import Image from "./Templates/Image";
 import Text from "./Templates/Text";
 import Youtube from "./Templates/Youtube";
-function Look({ isLook, title, sub, category, template, setIsLook }) {
+function Look({ isLook, title, sub, category,price ,template, setIsLook }) {
   return (
     <div className={`look-wrapper ${isLook ? "on" : ""}`}>
       <img
@@ -35,6 +35,12 @@ function Look({ isLook, title, sub, category, template, setIsLook }) {
                   : "관공시설"}
               </div>
               <div className="sub">{sub}</div>
+                        {price && (
+                  <div className="price-section">
+                    <div className="price-title">견적</div>
+                    <div className="price-content">{price}</div>
+                  </div>
+                )}
             </div>
           </div>
           <div className="template-wrapper">

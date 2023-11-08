@@ -84,6 +84,19 @@
   font-size: 17px;
   line-height: 30px;
 }
+.look-wrapper > .bottom > .wrapper > .title-section > .subject > .price-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #DBDBDB;
+}
+.look-wrapper > .bottom > .wrapper > .title-section > .subject > .price-section .price-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.look-wrapper > .bottom > .wrapper > .title-section > .subject > .price-section .price-content {
+  font-size: 32px;
+  font-weight: 700;
+}
 .look-wrapper > .bottom > .wrapper > .template-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

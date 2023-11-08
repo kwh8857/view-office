@@ -70,7 +70,7 @@
   position: absolute;
   right: 236px;
   display: grid;
-  grid-template-rows: 42px 37px 37px 37px 37px 37px;
+  grid-template-rows: 42px 37px 37px 37px 37px 37px 37px 37px;
   font-size: 14px;
   font-weight: 500;
   z-index: 100;
@@ -108,7 +108,7 @@
   background-color: white;
 }
 #root .question-list-page > .wrapper > .top > .right > .open {
-  height: 230px;
+  height: 420px;
 }
 #root .question-list-page > .wrapper > .top > .right > .open > .now > img {
   -webkit-transform: rotate(180deg);
@@ -136,9 +136,7 @@
           column-gap: 10px;
 }
 #root .question-list-page > .wrapper > .top > .right > .search > input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 160px;
   font-size: 14px;
   font-weight: 500;
 }

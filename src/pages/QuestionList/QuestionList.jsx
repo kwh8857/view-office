@@ -5,7 +5,6 @@ import firebaseApp from "../../config/firebaseApp";
 import "./css/index.css";
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 const Fstore = firebaseApp.firestore();
-const Fstorage = firebaseApp.storage();
 const QuestionList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -17,6 +16,7 @@ const QuestionList = () => {
   const [search, setSearch] = useState(undefined);
   const [List, setList] = useState([]);
   const [displayList, setdisplayList] = useState([]);
+  console.log(List);
   const __delete = useCallback(
     (id) => {
       Fstore.collection("question")
@@ -37,7 +37,6 @@ const QuestionList = () => {
   const __addIndex = useCallback(() => {
     let arr = displayList.slice();
     let length = Math.ceil(arr.length / 10);
-    console.log(length);
     if (nowindex + 1 <= length) {
       setNowindex(nowindex + 1);
     }
@@ -80,15 +79,7 @@ const QuestionList = () => {
   useEffect(() => {
     let arr = List.slice();
     if (category !== 0) {
-      arr = arr.filter(({ data }) =>
-        category === 1
-          ? data.category === "space"
-          : category === 2
-          ? data.category === "store"
-          : category === 3
-          ? data.category === "home"
-          : data.category === "public"
-      );
+      arr = arr.filter(({ type }) => type === filter_list[category]);
     }
     if (search) {
       arr = arr.filter(({ name }) => name.includes(search));
@@ -142,10 +133,10 @@ const QuestionList = () => {
               }}
             >
               <div className="now">
-                {arr[category]}
+                {filter_list[category]}
                 <img src="/assets/category.svg" alt="" />
               </div>
-              {arr.map((item, idx) => {
+              {filter_list.map((item, idx) => {
                 return (
                   <div
                     className="select"
@@ -243,7 +234,18 @@ const QuestionList = () => {
 
 export default QuestionList;
 
-const arr = ["문의 유형", "주거공간", "상업공간", "주택건축", "관공시설"];
+const filter_list = [
+  "전체",
+  "아파트",
+  "주택 별장",
+  "상가",
+  "공장",
+  "사무실",
+  "카페",
+  "기타",
+  "전체 리모델링",
+  "부분리모델링",
+];
 const tags = [
   { title: "고객명", type: "name" },
   { title: "연락처", type: "tel" },

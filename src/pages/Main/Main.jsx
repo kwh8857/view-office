@@ -15,6 +15,7 @@ function Main() {
   const [index, setIndex] = useState([]);
   const [search, setSearch] = useState(undefined);
   const [List, setList] = useState([]);
+  console.log(List);
   const [displayList, setdisplayList] = useState([]);
   const [isOrder, setisOrder] = useState(false);
   const __fixnav = useCallback(
@@ -90,10 +91,20 @@ function Main() {
         timestamp = clone[0].data.timestamp + 1;
       }
       if (type === "up") {
-        timestamp = clone[index - 1].data.timestamp + 1;
+        timestamp = clone[index - 1].data.timestamp;
+        Fstore.collection("editor")
+          .doc(clone[index - 1].key)
+          .update({
+            timestamp: clone[index].data.timestamp,
+          });
       }
       if (type === "down") {
-        timestamp = clone[index + 1].data.timestamp - 1;
+        timestamp = clone[index + 1].data.timestamp;
+        Fstore.collection("editor")
+          .doc(clone[index + 1].key)
+          .update({
+            timestamp: clone[index].data.timestamp,
+          });
       }
       if (type === "all-down" && index < clone.length - 1) {
         timestamp = clone[clone.length - 1].data.timestamp - 1;
