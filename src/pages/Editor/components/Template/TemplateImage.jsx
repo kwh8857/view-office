@@ -9,6 +9,7 @@ function TemplateImage({
   template,
   __imageUpdate,
   type,
+  __delete,
 }) {
   return (
     <>
@@ -30,6 +31,14 @@ function TemplateImage({
             : undefined
         }
       >
+        <button
+          className="remove-btn"
+          onClick={() => {
+            __delete(idx);
+          }}
+        >
+          <img src="/assets/editor/remove.svg" alt="삭제" />
+        </button>
         <label>
           <input
             type="file"

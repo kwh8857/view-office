@@ -224,6 +224,7 @@ function Screen({ temKey, Fstore, Fstorage, __update }) {
                             template={template}
                             __imageUpdate={__imageUpdate}
                             type={type}
+                                          __delete={__deleteTemplate}
                           />
                         );
                       } else if (type === "TITLE") {
@@ -247,6 +248,7 @@ function Screen({ temKey, Fstore, Fstorage, __update }) {
                             provided={provided}
                             idx={idx}
                             template={template}
+                                          __delete={__deleteTemplate}
                           />
                         );
                       } else {
@@ -260,6 +262,7 @@ function Screen({ temKey, Fstore, Fstorage, __update }) {
                             template={template}
                             __imageUpdate={__imageUpdate}
                             type={type}
+                                          __delete={__deleteTemplate}
                           />
                         );
                       }

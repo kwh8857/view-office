@@ -280,6 +280,28 @@
   width: 100%;
   min-height: 30px;
 }
+#root .editor .editor-wrapper .editor-screen .remove-btn {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: -35px;
+  right: 0px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+#root .editor .editor-wrapper .editor-screen .remove-btn > img {
+  width: 20px;
+}
 #root .editor .editor-wrapper .editor-screen .template-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,7 +310,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  margin: 6px 0;
+  margin: 20px 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -296,6 +318,7 @@
   background-color: #F5F6F8;
   border: 1px solid #DBDBDB;
   border-radius: 5px;
+  position: relative;
 }
 #root .editor .editor-wrapper .editor-screen .template-img > label {
   cursor: pointer;
@@ -346,12 +369,13 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 6px 0;
+  margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(2, 443px);
   -webkit-column-gap: 19px;
      -moz-column-gap: 19px;
           column-gap: 19px;
+  position: relative;
 }
 #root .editor .editor-wrapper .editor-screen .template-doubleimg > label {
   cursor: pointer;

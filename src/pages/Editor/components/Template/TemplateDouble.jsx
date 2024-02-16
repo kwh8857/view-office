@@ -9,6 +9,7 @@ function TemplateDouble({
   __imageUpdate,
   type,
   data,
+  __delete
 }) {
   return (
     <>
@@ -22,6 +23,14 @@ function TemplateDouble({
           setFocus(idx);
         }}
       >
+        <button
+          className="remove-btn"
+          onClick={() => {
+            __delete(idx);
+          }}
+        >
+          <img src="/assets/editor/remove.svg" alt="삭제" />
+        </button>
         <label className={data[0].url ? "isurl" : ""}>
           <input
             type="file"

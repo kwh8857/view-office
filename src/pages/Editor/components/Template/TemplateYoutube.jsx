@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import TemplateEmty from './TemplateEmty';
 
-function TemplateYoutube({ data, provided, template, idx, setFocus }) {
+function TemplateYoutube({ data, provided, template, idx, setFocus,__delete }) {
   return (
     <>
       {idx === 0 ? <TemplateEmty idx={idx} /> : undefined}
@@ -16,6 +16,14 @@ function TemplateYoutube({ data, provided, template, idx, setFocus }) {
           setFocus(idx);
         }}
       >
+                <button
+          className="remove-btn"
+          onClick={() => {
+            __delete(idx);
+          }}
+        >
+          <img src="/assets/editor/remove.svg" alt="삭제" />
+        </button>
         <div className="dnd-icon">
           <img
             src="/assets/projects/dnd-icon.svg"

@@ -251,16 +251,35 @@ $gray3: #dbdbdb;
           min-height: 30px;
         }
 
+        .remove-btn {
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: -35px;
+          right: 0px;
+          border: 1px solid #DBDBDB;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &>img {
+            width: 20px;
+          }
+        }
+
         .template-img {
           display: flex;
           justify-content: center;
           width: 100%;
-          margin: 6px 0;
+          margin: 20px 0;
           height: fit-content;
           min-height: 356px;
           background-color: #F5F6F8;
           border: 1px solid #DBDBDB;
           border-radius: 5px;
+          position: relative;
 
           &>label {
             cursor: pointer;
@@ -308,10 +327,11 @@ $gray3: #dbdbdb;
         .template-doubleimg {
           width: 100%;
           height: fit-content;
-          margin: 6px 0;
+          margin: 20px 0;
           display: grid;
           grid-template-columns: repeat(2, 443px);
           column-gap: 19px;
+          position: relative;
 
           &>label {
             cursor: pointer;
